@@ -2,6 +2,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 
 import Login from "./pages/Login";
@@ -16,6 +17,8 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
 
+  const token = localStorage.getItem("appointment-app-token");
+
   return (
 
     <BrowserRouter>
@@ -26,12 +29,24 @@ function App() {
 
         <Route
           path="/login"
-          element={<Login />}
+          element={
+            token ? (
+              <Navigate to="/" replace />
+            ) : (
+              <Login />
+            )
+          }
         />
 
         <Route
           path="/register"
-          element={<Register />}
+          element={
+            token ? (
+              <Navigate to="/" replace />
+            ) : (
+              <Register />
+            )
+          }
         />
 
 

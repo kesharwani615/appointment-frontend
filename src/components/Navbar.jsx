@@ -44,10 +44,10 @@ const Navbar = () => {
                     </>
                 ) : (
                     <div className="flex gap-6">
-                        <Link to="/login" className="text-sm font-bold uppercase tracking-widest text-text-dim hover:text-primary transition-colors self-center">Sign In</Link>
+                        {/* <Link to="/login" className="text-sm font-bold uppercase tracking-widest text-text-dim hover:text-primary transition-colors self-center">Sign In</Link>
                         <Link to="/register">
                             <Button className="px-8 py-2.5 text-[10px] font-black uppercase tracking-[0.2em]">Join Now</Button>
-                        </Link>
+                        </Link> */}
                     </div>
                 )}
             </div>

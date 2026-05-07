@@ -2,7 +2,9 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const ProtectedRoute = ({ children }) => {
-    const { user, loading } = useAuth();
+    const { loading } = useAuth();
+
+    const user = localStorage.getItem("appointment-user");
 
     console.log("user", user);
 

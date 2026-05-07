@@ -51,6 +51,11 @@ const Login = () => {
                 response?.data?.token
             );
 
+            localStorage.setItem(
+                "appointment-user",
+                JSON.stringify(response?.data?.user)
+            );
+
             navigate("/");
 
         } catch (err) {
